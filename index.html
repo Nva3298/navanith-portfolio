@@ -102,6 +102,8 @@
     transition:width .25s ease;
   }
   .nav-links a:hover::after{width:100%;}
+  .resume-link{color:var(--green) !important;}
+  .resume-link::after{background:var(--green) !important;}
   .nav-toggle{display:none;flex-direction:column;gap:4px;background:none;border:none;cursor:pointer;padding:6px;}
   .nav-toggle span{width:20px;height:2px;background:var(--text);display:block;}
 
@@ -419,6 +421,57 @@
     border-radius:1px;
   }
 
+  /* ---------- PROJECTS ---------- */
+  .project-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+  }
+  .proj-frame{padding:26px 24px 24px;display:flex;flex-direction:column;}
+  .proj-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:10px;
+    margin-bottom:10px;
+  }
+  .proj-title{font-size:16.5px;font-weight:700;line-height:1.3;}
+  .proj-org{font-size:12.5px;color:var(--text-dim);margin-top:3px;}
+  .proj-badge{
+    flex:0 0 auto;
+    font-family:var(--mono);
+    font-size:10.5px;
+    padding:3px 8px;
+    border-radius:20px;
+    border:1px solid var(--fc);
+    color:var(--fc);
+    white-space:nowrap;
+  }
+  .proj-desc{
+    font-size:13.5px;
+    line-height:1.6;
+    color:#CBD1DA;
+    margin-bottom:14px;
+  }
+  .proj-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px;
+    margin-top:auto;
+  }
+  .proj-tag{
+    font-family:var(--mono);
+    font-size:10.5px;
+    padding:3px 8px;
+    border-radius:3px;
+    background:rgba(255,255,255,0.04);
+    color:var(--text-dim);
+    border:1px solid var(--border);
+  }
+  @media (max-width:760px){
+    .project-grid{grid-template-columns:1fr;}
+  }
+
   /* ---------- EXPERIENCE ---------- */
   .job-frame{
     padding:28px 26px 30px;
@@ -626,9 +679,11 @@
     <nav class="nav-links" id="navLinks">
       <a href="javascript:void(0)" data-target="about">about</a>
       <a href="javascript:void(0)" data-target="skills">skills</a>
+      <a href="javascript:void(0)" data-target="projects">projects</a>
       <a href="javascript:void(0)" data-target="experience">experience</a>
       <a href="javascript:void(0)" data-target="achievements">achievements</a>
       <a href="javascript:void(0)" data-target="contact">contact</a>
+      <a href="Navanith_Shekha_Resume.pdf" target="_blank" rel="noopener" class="resume-link">resume ↗</a>
     </nav>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -649,7 +704,7 @@
       </div>
       <span class="role-tag"><span class="dot"></span>available for new opportunities</span>
       <h1>Navanith J&nbsp;Shekha</h1>
-      <p class="hero-sub">Data Annotator building clean, high-confidence training data for computer vision and NLP models. <span class="hl">3+ years</span> labeling images and text for autonomous systems, driver-monitoring AI, and crop-detection models — with accuracy that consistently lands at <span class="hl">95–97%</span>.</p>
+      <p class="hero-sub">Data Annotator building clean, high-confidence training data for computer vision and NLP models. <span class="hl">4+ years</span> labeling images and text for autonomous systems, driver-monitoring AI, and crop-detection models — with accuracy that consistently lands at <span class="hl">95–97%</span>.</p>
     </div>
 
     <div class="stat-grid">
@@ -664,7 +719,7 @@
         <div class="conf-bar"><span></span></div>
       </div>
       <div class="frame stat reveal" style="--fc:var(--amber)" data-tag="tenure" data-conf="70">
-        <div class="num" data-count="3" data-suffix="+ yrs">3+ yrs</div>
+        <div class="num" data-count="4" data-suffix="+ yrs">4+ yrs</div>
         <div class="lbl">Experience</div>
         <div class="conf-bar"><span></span></div>
       </div>
@@ -728,6 +783,79 @@
           <span class="chip" style="--fc:var(--blue)">Notion</span>
           <span class="chip" style="--fc:var(--blue)">Linux</span>
           <span class="chip" style="--fc:var(--blue)">ML-team collaboration</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="eyebrow">class: projects</div>
+    <h2 class="section-title">Projects</h2>
+    <div class="project-grid">
+
+      <div class="frame proj-frame reveal" style="--fc:var(--green)" data-tag="proj_01">
+        <div class="proj-head">
+          <div>
+            <div class="proj-title">V-Map Cross-Validation Script</div>
+            <div class="proj-org">Niqo Robotics</div>
+          </div>
+          <div class="proj-badge" style="--fc:var(--green)">python</div>
+        </div>
+        <p class="proj-desc">Built a Python script to generate V-Maps and cross-validate them against video data, catching spray-pattern misalignment before it reached the model training set.</p>
+        <div class="proj-tags">
+          <span class="proj-tag">Python</span>
+          <span class="proj-tag">Video Data</span>
+          <span class="proj-tag">Spray Alignment</span>
+        </div>
+      </div>
+
+      <div class="frame proj-frame reveal" style="--fc:var(--magenta)" data-tag="proj_02">
+        <div class="proj-head">
+          <div>
+            <div class="proj-title">Crop-Detection Dataset Pipeline</div>
+            <div class="proj-org">Niqo Robotics</div>
+          </div>
+          <div class="proj-badge" style="--fc:var(--magenta)">97% acc</div>
+        </div>
+        <p class="proj-desc">Annotated and quality-checked 6,000+ agricultural images with bounding boxes and semantic segmentation across multiple crop types, contributing directly to a crop-detection model that reached 97% entity-recognition accuracy.</p>
+        <div class="proj-tags">
+          <span class="proj-tag">CVAT</span>
+          <span class="proj-tag">Semantic Segmentation</span>
+          <span class="proj-tag">FiftyOne QA</span>
+        </div>
+      </div>
+
+      <div class="frame proj-frame reveal" style="--fc:var(--amber)" data-tag="proj_03">
+        <div class="proj-head">
+          <div>
+            <div class="proj-title">Crop Dataset Storage &amp; Retrieval</div>
+            <div class="proj-org">Niqo Robotics</div>
+          </div>
+          <div class="proj-badge" style="--fc:var(--amber)">data ops</div>
+        </div>
+        <p class="proj-desc">Owned crop-dataset data management end to end — structured uploads to MinIO and handled retrieval and segregation via Amazon S3, keeping the dataset organized as it scaled.</p>
+        <div class="proj-tags">
+          <span class="proj-tag">MinIO</span>
+          <span class="proj-tag">Amazon S3</span>
+          <span class="proj-tag">Data Ops</span>
+        </div>
+      </div>
+
+      <div class="frame proj-frame reveal" style="--fc:var(--blue)" data-tag="proj_04">
+        <div class="proj-head">
+          <div>
+            <div class="proj-title">Driver Monitoring &amp; Face Annotation</div>
+            <div class="proj-org">Mercedes-Benz R&amp;D India</div>
+          </div>
+          <div class="proj-badge" style="--fc:var(--blue)">95% acc</div>
+        </div>
+        <p class="proj-desc">Labeled datasets across Face Recognition, Head Orientation Detection, Driver Monitoring, and text-based Tire Annotation projects on the in-house IRA platform, holding 95% accuracy under tight deadlines.</p>
+        <div class="proj-tags">
+          <span class="proj-tag">IRA Platform</span>
+          <span class="proj-tag">Face Recognition</span>
+          <span class="proj-tag">Gesture Data</span>
         </div>
       </div>
 
@@ -814,9 +942,10 @@
       <h3>Let's work together</h3>
       <p>Open to Data Annotator, Annotation QA, and Dataset Ops roles — remote or Bangalore-based.</p>
       <div class="btn-row">
-        <a class="btn solid" href="https://mail.google.com/mail/?view=cm&fs=1&to=navanithshekha07@gmail.com&su=Portfolio%20Inquiry" target="_blank" rel="noopener">Email me</a>
+        <a class="btn solid" href="mailto:navanithshekha07@gmail.com?subject=Portfolio%20Inquiry">Email me</a>
         <a class="btn" href="tel:+919895580624">Call</a>
         <a class="btn" href="https://linkedin.com/in/navanith-j-shekha-85505b1ba" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="Navanith_Shekha_Resume.pdf" target="_blank" rel="noopener">Download Resume</a>
       </div>
     </div>
   </section>

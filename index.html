@@ -522,6 +522,42 @@
     border-radius:2px;
   }
 
+  /* ---------- CERTIFICATIONS ---------- */
+  .cert-frame{
+    padding:24px 26px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+    flex-wrap:wrap;
+  }
+  .cert-info{display:flex;align-items:center;gap:16px;}
+  .cert-badge{
+    flex:0 0 auto;
+    width:46px;height:46px;
+    border-radius:50%;
+    border:1.5px solid var(--fc);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:var(--mono);
+    font-size:16px;
+    color:var(--fc);
+  }
+  .cert-title{font-size:16px;font-weight:700;}
+  .cert-issuer{font-size:13px;color:var(--text-dim);margin-top:2px;}
+  .cert-link{
+    font-family:var(--mono);
+    font-size:12.5px;
+    padding:8px 16px;
+    border-radius:4px;
+    border:1px solid var(--fc);
+    color:var(--fc);
+    white-space:nowrap;
+    transition:background .2s ease;
+  }
+  .cert-link:hover{background:rgba(255,255,255,0.06);}
+
   /* ---------- EDU / LOG ---------- */
   .two-col{
     display:grid;
@@ -681,6 +717,7 @@
       <a href="javascript:void(0)" data-target="skills">skills</a>
       <a href="javascript:void(0)" data-target="projects">projects</a>
       <a href="javascript:void(0)" data-target="experience">experience</a>
+      <a href="javascript:void(0)" data-target="certifications">certifications</a>
       <a href="javascript:void(0)" data-target="achievements">achievements</a>
       <a href="javascript:void(0)" data-target="contact">contact</a>
       <a href="Navanith_Shekha_Resume.pdf" download="Navanith_Shekha_Resume.pdf" class="resume-link">resume ↓</a>
@@ -909,6 +946,22 @@
       <div class="log-line"><span class="yr">2021</span> — Diploma in Mechanical Engineering, P.A. Polytechnic</div>
       <div class="log-line"><span class="yr">2018</span> — Pre-University (PCMC), Parijnana INDP PU College</div>
       <div class="log-line"><span class="yr">2016</span> — SSLC, S.S.N.V.P. Kondevoor</div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications">
+    <div class="eyebrow">class: certifications</div>
+    <h2 class="section-title">Certifications</h2>
+    <div class="frame cert-frame reveal" style="--fc:var(--green)" data-tag="cert_01">
+      <div class="cert-info">
+        <div class="cert-badge" style="--fc:var(--green)">✓</div>
+        <div>
+          <div class="cert-title">AI Foundations</div>
+          <div class="cert-issuer">OpenAI Academy</div>
+        </div>
+      </div>
+      <a class="cert-link" style="--fc:var(--green)" href="https://academy.openai.com/public/certificate/4bubxmxoov" target="_blank" rel="noopener">View Certificate ↗</a>
     </div>
   </section>
 

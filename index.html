@@ -216,10 +216,14 @@
   .hero-frame{
     padding:44px 34px;
     margin-bottom:44px;
-    overflow:hidden;
     cursor:crosshair;
   }
   .hero-frame .frame-tag{color:var(--green);}
+  .hero-inner{
+    position:relative;
+    overflow:hidden;
+    border-radius:2px;
+  }
 
   /* marching-ants selection border — signature motion, reserved for the hero */
   .marching{border-color:transparent;}
@@ -733,15 +737,17 @@
   <!-- HERO -->
   <section class="hero">
     <div class="frame marching hero-frame" style="--fc:var(--green)" data-tag="class: annotator · conf 0.98" id="heroFrame">
-      <div class="scan-sweep" id="scanSweep"></div>
-      <div class="coord-crosshair" id="coordCrosshair">
-        <div class="coord-line h"></div>
-        <div class="coord-line v"></div>
-        <div class="coord-readout" id="coordReadout">x: 0, y: 0</div>
+      <div class="hero-inner">
+        <div class="scan-sweep" id="scanSweep"></div>
+        <div class="coord-crosshair" id="coordCrosshair">
+          <div class="coord-line h"></div>
+          <div class="coord-line v"></div>
+          <div class="coord-readout" id="coordReadout">x: 0, y: 0</div>
+        </div>
+        <span class="role-tag"><span class="dot"></span>available for new opportunities</span>
+        <h1>Navanith J&nbsp;Shekha</h1>
+        <p class="hero-sub">Data Annotator building clean, high-confidence training data for computer vision and NLP models. <span class="hl">4+ years</span> labeling images and text for autonomous systems, driver-monitoring AI, and crop-detection models — with accuracy that consistently lands at <span class="hl">95–97%</span>.</p>
       </div>
-      <span class="role-tag"><span class="dot"></span>available for new opportunities</span>
-      <h1>Navanith J&nbsp;Shekha</h1>
-      <p class="hero-sub">Data Annotator building clean, high-confidence training data for computer vision and NLP models. <span class="hl">4+ years</span> labeling images and text for autonomous systems, driver-monitoring AI, and crop-detection models — with accuracy that consistently lands at <span class="hl">95–97%</span>.</p>
     </div>
 
     <div class="stat-grid">
